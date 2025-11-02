@@ -1,75 +1,193 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Frederick Randell</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+    body {
+        color: rgb(58, 57, 54);
+    }
+
+    .home-left-col {
+        background-color: #f8f9fa;
+        border-right: 1px solid #dee2e6;
+    }
+
+    .home-center-col {
+        padding: 0 7%;
+        color: rgb(58, 57, 54);
+    }
+
+    .home-right-col1 {
+        background-color: #f8f9fa;
+        background-image: url('images/fred-slice4.webp');
+        background-size: cover;
+        background-position: top;
+    }
+
+    .home-right-col2 {
+        background-color: #f8f9fa;
+        background-image: url('images/work-foxtel.webp');
+         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+    .skills-list {
+        list-style-type: none;
+        padding: 0;
+        text-transform: uppercase;
+        color: rgb(160, 160, 160);
+        margin: 3em 0;
+        font-size: 1.15em;
+    }
+    .skills-list li:last-child {
+        font-weight: bold;
+    }
+
+    .cv-left-col {
+        background-color: #f8f9fa;
+        background-image: url('images/work-foxtel.webp');
+         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+
+    .cv-right-col {
+        background-color: #DFDEDB;
+        padding: 5% 7%;
+
+    }
+
+    .cv-right-col h2, .cv-right-col h3 {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .cv-right-col h2 {
+        font-size: 1.3em
+    }
+
+    .cv-right-col h3 {
+        font-size: 1em
+    }
+
+    .cv-right-col ul {
+        list-style-type: none;
+        padding: 0;
+        line-height: 1.1em;
+    }
+
+    .cv-right-col ul li {
+        margin-bottom: 0.7em;
+    }
+    </style>
 
   </head>
-  <body>
+  <body class="h-100">
 
-    <nav class="navbar navbar-light bg-light">
-      <div class="container">
-        <span class="navbar-brand mb-0 h1">Frederick Randell</span>
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container p-4">
+    <div class="container-fluid h-100">
 
-      <div class="row">
+        <div class="row h-100 my-auto">
+            <div class="col-1 h-100 home-left-col">
+            </div>
 
-        <div class="col-6">
-          <img src="images/fred-head.jpg" class="img-fluid rounded-circle" alt="Frederick Randell">
+            <div class="col-6 home-center-col d-flex flex-column justify-content-center">
+                    <h1 class="display-2">Frederick Randell</h1>
+                    <!-- <p class="lead">With over two decades of industry experience, I am a passionate creator of user-centred design solutions whether they be web, application, brand or service-based.</p> -->
+                    <ul class="skills-list">
+                        <li>Critical</li>
+                        <li>Creative</li>
+                        <li>Collaborative</li>
+                        <li>Empathetic</li>
+                        <li>Design</li>
+                    </ul>
+                    <p>
+                        Sydney, Australia <!-- | <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Connect</a> -->
+                    </p>
+                    <ul class="list-inline social-icons">
+                        <li class="list-inline-item"><a href="https://www.linkedin.com/in/frederick-randell/"><i class="bi bi-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.instagram.com/fredrandell/"><i class="bi bi-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/fred.randell/"><i class="bi bi-facebook"></i></a></li>
+                    </ul>
+                    <!-- Button trigger modal
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Connect
+                    </button> -->
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Contact</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                        
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="nameInput" class="form-label">Your name</label>
+                                        <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="emailInput" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="messageTextarea" class="form-label">Message</label>
+                                        <textarea class="form-control" id="messageTextarea" rows="4"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary">Send message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2 home-right-col1">
+            </div>
+            <div class="col-3 home-right-col2">
+            </div>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-12">
-          <h1 class="display-3">Hi, I'm Fred</h1>
-          <p class="lead">With over two decades of industry experience, I am a passionate creator of user-centred design solutions whether they be web, application, brand or service-based.</p>
-          </div>
-          
-      </div>
-
-      <div class="row">
-      <div class="row gy-3">
-        <div class="col-sm">
-          <svg class="bd-placeholder-img img-thumbnail" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A project thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A project thumbnail</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-
-        </div>
-        <div class="col-sm">
-
-          <h3>Project</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque laborum eos, dolore in repudiandae, quas nemo, quod beatae omnis ut dicta facere ad necessitatibus laudantium obcaecati tenetur iste neque ex.</p>
-          <button type="button" class="btn btn-primary">See More</button>
-        </div>
-      </div>
-      <div class="row gy-3">
-        <div class="col-sm">
-          <svg class="bd-placeholder-img img-thumbnail" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A project thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>A project thumbnail</title><rect width="100%" height="100%" fill="#868e96"></rect></svg>
-
-        </div>
-        <div class="col-sm">
-
-          <h3>Project</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque laborum eos, dolore in repudiandae, quas nemo, quod beatae omnis ut dicta facere ad necessitatibus laudantium obcaecati tenetur iste neque ex.</p>
-          <button type="button" class="btn btn-primary">See More</button>
-        </div>
-      </div>
     </div>
 
-    
+    <div class="container-fluid h-100">
+
+        <div class="row h-100 my-auto">
+            <div class="col-5 cv-left-col">
+            </div>
+            <div class="col-7 cv-right-col d-flex flex-column justify-content-center"">
+                <h2>Experience</h2>
+                <h3>Freelance Designer  //  2014 - 2024</h3>
+                <ul>
+                    <li>Brand creation, design of physical + digital collateral</li>
+                    <li>Projects: Central West Leadership Academy | Under Western Skies Music Festival</li>
+                </ul>
+                <h3>Director of UX, Boomworks  // 2004 - 2014</h3>
+                <ul>
+                    <li>Co-founder of design agency with over 30 employees, head of the UX team</li>
+                    <li>Business & user research, wireframe and prototyping, user testing, presentations</li>
+                    <li>Key projects: Telstra Transformation, My Account | Foxtel redesign</li>
+                </ul>
+                <h3>Senior Information Architect, Red Square // 1997 - 2004 </h3>
+                <ul>
+                    <li>One of Sydney's first web design agencies</li>
+                    <li>Image production, HTML, ColdFusion, Information Architecture, Interaction Design</li>
+                    <li>Key projects: Qantas oneworld alliance | YHA Australia | Panasonic Australia</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
