@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Frederick Randell</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 1.1rem;
+        font-weight: 300;
+        line-height: 1;
+    }
+
+    html, body {
+        height: 100%;
+        margin: 0; /* Remove default body margin */
+    }
+
+    h1 {
+        font-size: calc(1.475rem + 2.7vw);
+        font-weight: 200;
+        line-height: 1.1;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, [col-start] 1fr);
+        gap: 0px;
+        height: 100vh;
+        
+    }
+
+    /* Mobile first */
+    .container > * {
+        border: 0px solid green;
+        padding: 10%;
+        grid-column: col-start / span 12;
+    }
+
+    .leftbar, .heompage .rightcolB {
+        display: none;
+    }
+
+    .leftbar {
+        display: none;
+    }
+
+    .content {
+        grid-column: col-start / span 8;
+        grid-row: 1;
+        align-content: center;
+        border: 0;
+        min-width: 200px;
+    }
+    
+    .rightcolA {
+        grid-column: 9 / span 4;
+        grid-row: 1;
+    }
+
+    .uxpage .content {
+        grid-column: col-start / span 5;
+        grid-row: 1 / 4;
+    }
+    .uxpage .rightcolA, .uxpage .rightcolB, .uxpage .rightcolC {
+        grid-column: col-start 6 / span 7;
+        border-left: 1px solid #dee2e6;
+    }
+
+    .uxpage .rightcolB, .uxpage .rightcolC {
+        border-top: 1px solid #dee2e6;
+    }
+    .uxpage .rightcolA {
+        grid-column: col-start 6 / span 7;
+        grid-row: 1;
+        padding: 0;
+        position: relative;
+    }
+    .uxpage .rightcolB {
+        grid-column: col-start 6 / span 7;
+        grid-row: 2;
+        padding: 0;
+        position: relative;
+    }
+    .uxpage .rightcolC {
+        grid-column: col-start 6 / span 7;
+        grid-row: 3;
+        padding: 0;
+
+        position: relative;
+    }
+    .uxpage .rightcolA img, .uxpage .rightcolB img, .uxpage .rightcolC img {
+        object-fit: cover;
+        overflow: hidden;
+        width:100%;
+        height: 100%;
+    }
+    @media (min-width: 576px) {
+
+        .content {
+            grid-column: col-start / span 7;
+            grid-row: 1;
+        }
+        
+        .rightcolA {
+            grid-column: col-start 8 / span 2;
+            grid-row: 1;
+        }
+        .rightcolB {
+            display: inline;
+            grid-column: col-start 10 / span 3;
+            grid-row: 1;
+        }
+        
+        .homepage .content, .uxpage .content {
+            border-left: 10px solid #dee2e6;
+        }
+
+        .uxpage .content {
+            grid-column: col-start / span 5;
+            grid-row: 1 / 3;
+        }
+
+        .uxpage .rightcolA {
+            grid-column: col-start 6 / span 7;
+            grid-row: 1;
+        }
+
+        .uxpage .rightcolB {
+            grid-column: col-start 6 / span 4;
+            grid-row: 2;
+        }
+
+        .uxpage .rightcolC {
+            grid-column: col-start 10 / span 3;
+            grid-row: 2;
+        }
+    } 
+
+    @media (min-width: 768px) {
+        .leftbar {
+            display: inline;
+            grid-column: col-start / span 1;
+            grid-row: 1;
+        }
+        .uxpage .leftbar {
+            grid-row: 1 / 3;
+        }
+        .content {
+            grid-column: col-start 2 / span 6;
+            grid-row: 1;
+        }
+        .uxpage .content {
+            grid-column: col-start 2 / span 4;
+            grid-row: 1 / 3;
+        }
+        .rightcolA {
+            grid-column: col-start 8 / span 2;
+            grid-row: 1;
+        }
+        .rightcolB {
+            grid-column: col-start 10 / span 3;
+            grid-row: 1;
+        }
+        .homepage .content, .uxpage .content {
+            border: 0;
+        }
+    }
+    .leftbar {
+        background-color: #f8f9fa;
+        border-right: 1px solid #dee2e6;
+    }
+    .homepage .rightcolA {
+        background-color: #f8f9fa;
+        background-image: url('images/fred-slice4.webp');
+        background-size: cover;
+        background-position: top;
+    }
+    .homepage .rightcolB {
+        background-color: #f8f9fa;
+        background-image: url('images/wireframe_with_annotations.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+    .resume .leftbar {
+        display: inline;
+        grid-column: col-start / span 5;
+        grid-row: 1;
+        background-image: url('images/work-foxtel.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+    .resume .content {
+        display: inline;
+        grid-column: col-start 6 / span 7;  
+        grid-row: 1;
+        background-color: #DFDEDB;
+    }
+    .inset-shadow {
+        box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.5); 
+    }
+    .content ul {
+        list-style: none;
+        padding: 0;
+    }
+    .skills-list {
+        list-style-type: none;
+        padding: 0;
+        text-transform: uppercase;
+        color: rgb(160, 160, 160);
+        margin: 3em 0;
+        padding: 1.1em 0 0 2em;
+    }
+    li {
+        margin: 0 0 0.4em 0;
+    }
+    .skills-list li:last-child {
+        font-weight: bold;
+    }
+    .experienced-list {
+        line-height: 1.1em;
+        padding: 1.1em 0 0 1em;
+        font-size: 1em;
+    }
+
+    .experienced-list li {
+        margin: 0 0 0.5em 0;
+    }
+
+    .caption-list {
+        list-style-type: none;
+        line-height: 1.1em;
+        padding: 0;
+        font-size: .8em;
+        color: rgb(160, 160, 160);
+        margin: 3rem 0;
+    }
+
+    .caption-list li {
+        margin-bottom: 0.7em;
+    }
+    .indicator {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        float: left;
+        color: #000;
+        background-color: RGBA(248, 249, 250, var(--bs-bg-opacity, 1));
+        padding: 5px 10px;
+        font-weight: bold;
+        font-size: 0.8rem;
+        border-radius: 10px;
+    }
+    .socials-list li {
+        display: inline-block;
+    }
+    /* Style all font awesome icons */
+    .fa {
+        padding: 3px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+
+    </style>
+</head>
+<body style="height: 100%;">
+    <div class="container homepage">
+        <div class="leftbar"></div>
+        <div class="content">
+            <h1 class="display-4">Frederick Randell</h1>
+            <ul class="skills-list">
+                <li>Critical</li>
+                <li>Creative</li>
+                <li>Collaborative</li>
+                <li>Empathetic</li>
+                <li>Design</li>
+            </ul>
+            <p><small>With over two decades of industry experience, I am a passionate creator of user-centred design solutions whether they be web, application, brand or service-based.</small></p>
+            <ul class="socials-list">
+                <li><a href="https://www.linkedin.com/in/frederick-randell/" class="fa fa-linkedin"></a></li>
+                <li><a href="https://www.instagram.com/fredrandell/" class="fa fa-instagram"></a></li>
+                <li><a href="https://www.facebook.com/fred.randell/" class="fa fa-facebook"></a></li>
+            </ul>
+            <p>
+                Sydney, Australia
+            </p>
+        </div>
+        <div class="rightcolA"></div>
+        <div class="rightcolB inset-shadow"></div>
+    </div>
+    <div class="container resume">
+        <div class="leftbar"></div>
+        <div class="content">
+            <h2>Experience</h2>
+            <h3>Freelance Designer  //  2014 - 2024</h3>
+            <ul>
+                <li>Brand creation, design of physical + digital collateral</li>
+                <li>Projects: Central West Leadership Academy | Under Western Skies Music Festival</li>
+            </ul>
+            <h3>Director of UX, Boomworks  // 2004 - 2014</h3>
+            <ul>
+                <li>Co-founder of design agency: growing from 2 to over 30 employees</li>
+                <li>Tasks: End-to-end product design from discovery and ideation to final
+UI / product. UX team leadership, project ownership, client conduit</li>
+                <li>Key projects: Telstra Transformation & Account, Foxtel Site Redesign</li>
+            </ul>
+            <h3>Senior Information Architect, Red Square // 1997 - 2004 </h3>
+            <ul>
+                <li>One of Sydney's first web design agencies</li>
+                <li>Image production, HTML, ColdFusion, Information Architecture, Interaction Design</li>
+                <li>Key projects: Qantas oneworld alliance, YHA Australia, Panasonic</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container uxpage">
+        <div class="leftbar "></div>
+        <div class="content">
+            <h1>01. UX</h1>
+            <ul class="experienced-list">
+                <li>User Research & Testing</li> 
+                <li>Data Analysis & Synthesis</li>
+                <li>IA and Data Organisation</li>
+                <li>Wireframing & Prototyping</li>
+            </ul>
+            <ul class="caption-list">
+                <li>[A] Government website project: regional & metro user research, wireframe, usability testing, refine, design</li>
+                <li>[B] Foxtel website: high-fidelity prototype design and testing, mobile and desktop</li>
+                <li>[C] Home loan and accounts company website: site audit, new IA</li>
+            </ul>
+        </div>
+        <div class="rightcolA"><span class="indicator">A</span><img src="images/frame_ux_lg.webp" alt="Governemt site wireframes"></div>
+        <div class="rightcolB"><span class="indicator">B</span><img src="images/frame_ux_foxtel.webp" alt="Foxtel prototype flow"></div>
+        <div class="rightcolC"><span class="indicator">C</span><img src="images/frame_ux_sitemap.webp" alt="Site Map"></div>
+    </div>
+</body>
